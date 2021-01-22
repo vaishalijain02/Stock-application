@@ -1,0 +1,16 @@
+<div class="container">
+  <h1 class="pt-3 pb-3">{{heading}}</h1>
+  <div class="form-group mb-4">
+    <input class="form-control" type="text" [(ngModel)]="searchText" placeholder="Search">
+  </div>
+
+  <div class="list-group list-group-flush mt-3"  *ngIf="(modelList | filter: searchText).length > 0; else noResults">
+     <div  class="list-view list-group-item model-items" *ngFor="let item of modelList | filter: searchText; let i = index">
+      <img *ngIf="!authLock" class="lock" src="assets/images/lock.png">
+      <a class="" [routerLink]="['detail', item.id, {heading: item.heading}]">{{item.heading}}</a>
+     </div>
+  </div>
+  <ng-template #noResults>
+    <p>No results found for "{{searchText}}".</p>
+  </ng-template>
+</div>

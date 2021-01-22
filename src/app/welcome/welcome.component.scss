@@ -1,0 +1,48 @@
+@import "~bootstrap/scss/bootstrap-grid.scss";
+
+@include media-breakpoint-up(xs) {
+  .carousel-img {
+    height: 350px;
+  }
+  .card-img-top {
+    height: 65px;
+    width: 45%;
+    margin: auto;
+  }
+  .card {
+    width: 10rem !important;
+    height: 150px;
+    margin-bottom: 40px;
+    border: none;
+  }
+  .container {
+    max-width: 420px;
+  }
+
+  .btn {
+    padding: 0px 6px;
+    font-size: 15px;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .container {
+    max-width: 1420px;
+  }
+  .carousel-img {
+    height: 700px;
+  }
+
+  .card-img-top {
+    height: 135px;
+    width: 50%;
+    margin: auto;
+  }
+  .card {
+    width: 18rem!important;
+    height: 275px;
+    border: none;
+  }
+}
+
+
